@@ -1,20 +1,3 @@
-<p align="center">
-<img width="768" src="https://raw.githubusercontent.com/QiuSimons/Others/master/YAOF.png" >
-</p>
-<p align="center">
-<img src="https://github.com/Tired-Fox/cargors/raw/aabd34c/assets/badges/built_with_love.svg">
-<p>
-<p align="center">
-<img alt="GitHub All Releases" src="https://img.shields.io/github/downloads/QiuSimons/YAOF/total?style=for-the-badge">
-<img alt="GitHub" src="https://img.shields.io/github/license/QiuSimons/YAOF?style=for-the-badge">
-<p>
-<p align="center">
-<img src="https://github.com/QiuSimons/YAOF/workflows/R2C-OpenWrt/badge.svg">
-<img src="https://github.com/QiuSimons/YAOF/workflows/R2S-OpenWrt/badge.svg">
-<img src="https://github.com/QiuSimons/YAOF/workflows/R4S-OpenWrt/badge.svg">
-<img src="https://github.com/QiuSimons/YAOF/workflows/X86-OpenWrt/badge.svg">
-<p>
-
 
 ### 特性
 
