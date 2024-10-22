@@ -214,7 +214,7 @@ echo > ./feeds/packages/utils/watchcat/files/watchcat.config
 
 ### 最后的收尾工作 ###
 # 修改ip
-sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/luci2/bin/config_generate
+sed -i 's/192.168.1.1/192.168.11.1/g' package/base-files/files/bin/config_generate
 # Lets Fuck
 mkdir -p package/base-files/files/usr/bin
 cp -rf ../OpenWrt-Add/fuck ./package/base-files/files/usr/bin/fuck
