@@ -182,19 +182,6 @@ popd
 pushd feeds/luci
 wget -qO- https://github.com/openwrt/luci/commit/0b5fb915.patch | patch -p1
 popd
-# 动态DNS
-sed -i '/boot()/,+2d' feeds/packages/net/ddns-scripts/files/etc/init.d/ddns
-# Docker 容器
-rm -rf ./feeds/luci/applications/luci-app-dockerman
-cp -rf ../dockerman/applications/luci-app-dockerman ./feeds/luci/applications/luci-app-dockerman
-sed -i '/auto_start/d' feeds/luci/applications/luci-app-dockerman/root/etc/uci-defaults/luci-app-dockerman
-pushd feeds/packages
-wget -qO- https://github.com/openwrt/packages/commit/e2e5ee69.patch | patch -p1
-wget -qO- https://github.com/openwrt/packages/pull/20054.patch | patch -p1
-popd
-sed -i '/sysctl.d/d' feeds/packages/utils/dockerd/Makefile
-rm -rf ./feeds/luci/collections/luci-lib-docker
-cp -rf ../docker_lib/collections/luci-lib-docker ./feeds/luci/collections/luci-lib-docker
 # IPv6 兼容助手
 patch -p1 <../PATCH/odhcp6c/1002-odhcp6c-support-dhcpv6-hotplug.patch
 # ODHCPD
@@ -207,8 +194,6 @@ wget https://github.com/openwrt/odhcp6c/pull/82.patch -O package/network/ipv6/od
 wget https://github.com/openwrt/odhcp6c/pull/83.patch -O package/network/ipv6/odhcp6c/patches/83.patch
 wget https://github.com/openwrt/odhcp6c/pull/84.patch -O package/network/ipv6/odhcp6c/patches/84.patch
 wget https://github.com/openwrt/odhcp6c/pull/90.patch -O package/network/ipv6/odhcp6c/patches/90.patch
-# watchcat
-echo > ./feeds/packages/utils/watchcat/files/watchcat.config
 # 默认开启 Irqbalance
 #sed -i "s/enabled '0'/enabled '1'/g" feeds/packages/utils/irqbalance/files/irqbalance.config
 
