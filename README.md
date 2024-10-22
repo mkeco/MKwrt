@@ -5,4 +5,3 @@
 - 默认开启了 SFE（修正了 udp 入站以及 sqm 兼容性问题）
 - 插件包含：PassWall2，DAED，UPNP，FullCone(防火墙中开启，默认开启)，流量分载，irq 优化
 - 集成并默认启用了 BBRv3，LRNG
-- 如有任何问题，请先尝试 ssh 进入后台，输入 fuck 后回车，等待机器重启后确认问题是否已经解决
